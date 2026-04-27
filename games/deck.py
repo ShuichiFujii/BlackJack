@@ -1,4 +1,4 @@
-from card import Card, Suit, Rank
+from games.card import Card, Suit, Rank
 import random
 
 

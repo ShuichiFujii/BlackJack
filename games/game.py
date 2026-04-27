@@ -1,5 +1,5 @@
-from player import Player, PlayerStatus
-from deck import Deck
+from games.player import Player, PlayerStatus
+from games.deck import Deck
 
 class GameDisplay:
     def show_status(self, name, hand_text, score):
@@ -93,11 +93,11 @@ class Game:
     def determine_winner(self):
         dealer_score = self.dealer.hand.get_score()
         self.display.show_message(f"\n--- Final Results ---")
-        self.display.show_message(f"Dealer's score: {dealer_score}")
+        self.display.show_message(f"Dealer's score: {dealer_score}\n")
         
         for player in self.players:
             player_score = player.hand.get_score()
-            self.display.show_message(f"Player {player.player_id}'s score: {player_score}\n")
+            self.display.show_message(f"Player {player.player_id}'s score: {player_score}")
             
             # 1. プレイヤーがバーストしている場合（無条件で負け）
             if player_score > 21:
@@ -116,3 +116,5 @@ class Game:
                 
             else:
                 self.display.show_message(f"Result: Player {player.player_id} pushes (draw).")
+                
+            print()

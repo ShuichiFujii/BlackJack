@@ -1,6 +1,6 @@
 import pytest
-from player import Player, PlayerStatus
-from hand import Hand
+from games.player import Player, PlayerStatus
+from games.hand import Hand
 
 """
 テストケース1: プレイヤーの初期化

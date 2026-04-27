@@ -1,6 +1,6 @@
 import pytest
-from hand import Hand
-from card import Card, Rank, Suit
+from games.hand import Hand
+from games.card import Card, Rank, Suit
 
 @pytest.fixture
 def hand():

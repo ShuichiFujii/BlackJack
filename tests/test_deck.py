@@ -1,6 +1,6 @@
 import pytest
-from deck import Deck
-from card import Card, Rank, Suit
+from games.deck import Deck
+from games.card import Card, Rank, Suit
 
 @pytest.fixture
 def deck():
