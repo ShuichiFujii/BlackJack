@@ -12,7 +12,7 @@ Python で実装したCLIベースのブラックジャックゲームです。
 
 ## Demo / Screenshot
 
-実行画面、GIF、CLIの実行例、Web画面など。
+![demo](docs/BlackJack_demo.gif)
 
 ## Features
 
