@@ -6,17 +6,17 @@
 
 ## Overview
 
-Python で実装したCLIベースのブラックジャックゲームです。
+Python で実装した CLI ベースのブラックジャックゲームです。
 `Card`, `Deck`, `Hand`, `Player`, `Game` といったクラスに責務を分割し、オブジェクト指向を意識して実装しています。
 ターミナルから実行し、ディーラーとのブラックジャックをプレイすることができます。
 
-## Demo / Screenshot
+## Demo
 
 ![demo](docs/BlackJack_demo.gif)
 
 ## Features
 
-- CLI上でブラックジャックをプレイできる
+- CLI 上でブラックジャックをプレイできる
 - 複数プレイヤーに対応
 - 52枚のカードデッキを生成・シャッフル
 - Hit / Stand の選択に対応
@@ -42,29 +42,21 @@ python3 main.py
 
 1. プレイヤーの人数を入力します。
 2. 各プレイヤーにカードが配られます。
-3. プレイヤーはHit（カードを引く）かStand（カードを引かない）を選択します。
-4. Stand するか、Bust（合計が21を超える）するまで、プレイヤーはHitを選択できます。
-5. 全プレイヤーがStand するか、Bust した後、ディーラーのターンになります。
-6. ディーラーがStandするか、Bustするまでカードを引きます。その後、ディーラーの手札が公開され、勝敗が決まります。
-
-<!-- ## Tests
-
-テストの実行方法。
-
-## CI
-
-GitHub Actionsなどで何を自動化しているか。 -->
+3. プレイヤーは Hit（カードを引く）か Stand（カードを引かない）を選択します。
+4. Stand するか、Bust（合計が21を超える）するまで、プレイヤーは Hit を選択できます。
+5. 全プレイヤーが Stand するか、Bust した後、ディーラーのターンになります。
+6. ディーラーが Stand するか、Bust するまでカードを引きます。その後、ディーラーの手札が公開され、勝敗が決まります。
 
 ## Project Structure
 
 ```text
 BlackJack/
 ├── main.py
-├── card.py # Card, Rank, Suit
-├── deck.py # Deck
-├── hand.py # Hand
-├── player.py # Player
-└── game.py # Game
+├── card.py    # Card, Rank, Suit
+├── deck.py    # Deck
+├── hand.py    # Hand
+├── player.py  # Player
+└── game.py    # Game
 ```
 
 ## Design / Implementation Notes
@@ -74,8 +66,7 @@ BlackJack/
 主なクラスの責務は以下の通りです。
 
 - `Card` クラスは、カードのランクとスートを表現します。
-- `Deck` クラスは、52枚のカードを生成し、シャッフル
-  する機能を提供します。
+- `Deck` クラスは、52枚のカードを生成し、シャッフルする機能を提供します。
 - `Hand` クラスは、プレイヤーの手札を管理し、スコアの計算や Bust 判定を行います。
 - `Player` クラスは、プレイヤーの名前と手札を管理し、勝敗判定の機能を提供します。
 - `Game` クラスは、ゲームの進行を管理し、プレイヤーのターンやディーラーのターンを制御します。
@@ -84,7 +75,6 @@ BlackJack/
 
 ## Future Improvements
 
-- pytest を導入し、スコア計算・Bust 判定・勝敗判定のテストを追加する
 - 入力値のバリデーションを強化する
 - ベット機能を追加する
 - ゲーム結果の履歴を保存できるようにする
